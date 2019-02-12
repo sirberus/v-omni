@@ -1,0 +1,25 @@
+{
+  "name": "v-omni",
+  "version": "0.0.1",
+  "description": "swiss army knife components",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sirberus/v-omni.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "sirberus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sirberus/v-omni/issues"
+  },
+  "homepage": "https://github.com/sirberus/v-omni#readme"
+}
