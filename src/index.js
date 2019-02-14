@@ -1,10 +1,11 @@
+import plugin from "./plugin.js";
 import Icon from "./components/Icon";
 
+export { plugin }
 export { Icon }
 
 export default {
-  Icon,
-  install(Vue) {
-    Vue.component('icon', Icon)
-  }
+  plugin,
+  install: plugin,
+  Icon
 }
