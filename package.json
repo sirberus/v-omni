@@ -24,20 +24,16 @@
   },
   "homepage": "https://github.com/sirberus/v-omni#readme",
   "dependencies": {
-    "@storybook/addon-knobs": "^4.1.11",
-    "@storybook/addon-viewport": "^4.1.11",
-    "@storybook/vue": "^4.0.2",
-    "vue": "^2.6.6"
+    "vue": ">=2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
-    "@storybook/addon-actions": "^4.1.11",
-    "@storybook/addon-backgrounds": "^4.1.11",
-    "@storybook/addon-console": "^1.1.0",
-    "@storybook/addon-notes": "^4.1.11",
     "babel-loader": "^8.0.5",
     "babel-preset-vue": "^2.0.2",
     "vue-loader": "^15.6.2",
-    "vue-template-compiler": "^2.6.6"
+    "vue-template-compiler": "^2.6.6",
+    "@storybook/addon-knobs": "^4.1.11",
+    "@storybook/addon-viewport": "^4.1.11",
+    "@storybook/vue": "=4.0.2"
   }
 }
