@@ -1,3 +1,4 @@
 .storybook
 .cache
 **/*.stories.js
+storybook-static
