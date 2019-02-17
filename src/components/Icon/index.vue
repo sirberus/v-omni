@@ -1,21 +1,32 @@
-<template>
-  <div class="icon-wrapper">
-    <mdi v-if="icon.type === 'mdi'" :icon="icon.mdi"/>
-  </div>
-</template>
-
 <script>
-import Mdi from './_MdiLayer.vue'
+import ComplexIcon from './_ComplexIcon.vue';
+import SimpleIcon from './_SimpleIcon.vue';
 
 export default {
-  components: {
-    Mdi
-  },
   props: {
     icon: {
       type: Object,
       required: true
     }
-  }
+  },
+  render(h) {
+    if (this.icon.type === 'complex') {
+      return h(ComplexIcon, 
+        { 
+          props: {
+            wrapperClass: this.icon.wrapperClass,
+            wrapperStyle: this.icon.wrapperStyle,
+            layers: this.icon.value
+          } 
+        })
+    } else {
+      return h(SimpleIcon, 
+        { 
+          props: { 
+            icon: this.icon
+          } 
+        })
+    }
+  },
 }
 </script>
