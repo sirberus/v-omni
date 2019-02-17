@@ -15,7 +15,7 @@ import Omni from 'v-omni'
 Vue.use(Omni)
 ```
 
-All examples will use CSS classes defined in [Tailwind](https://tailwindcss.com/docs/what-is-tailwind). Some components also use [MDI icons](https://materialdesignicons.com/). If you would like to use these from CDN, include these in the head of your root HTML:
+All examples use CSS classes defined in [Tailwind](https://tailwindcss.com/docs/what-is-tailwind). Some components also use [MDI icons](https://materialdesignicons.com/). If you would like to use these from CDN, include these in the head of your root HTML:
 
 ```html
 <link href="https://cdn.materialdesignicons.com/3.4.93/css/materialdesignicons.min.css" rel="stylesheet">
@@ -24,30 +24,21 @@ All examples will use CSS classes defined in [Tailwind](https://tailwindcss.com/
 
 ## Components
 
-### Icons
+### Icon
 
-#### MDI Icon
-
-```html
-<mdi icon="star"/>
-```
-
-[See here](https://cdn.materialdesignicons.com/3.4.93/) for all MDI icons and their names. Note that the value of `icon` on the `<mdi/>` component does not include the 'mdi-' prefix. (icon='star', not icon='mdi-star')
-
-#### Text Icon
-
-Use an array of up to 4 characters as an icon. Works great with Emoji, icon fonts, or to create glyphs for acronyms.
+`<icon>` is a flexible component that dynamically displays an icon as described by an Object.
 
 ```html
-<text-icon icon="👌"/>
+<icon :icon="{ type: 'mdi', value: 'star' }"/>
 ```
 
-#### Icon
+The `icon` prop accepts the following keys:
+- **type** (required) has possible values 'mdi', 'svg', 'text', and 'complex'
+- **value** (required) is the value corresponding to the type.
+  - For 'text' and 'svg', the value is the string value you'd like to use.
+  - For 'mdi', the value is the name of the icon without the `mdi-` prefix
+  - For 'complex', the value is an array of non-complex icon prop objects. This will layer the icons in the given order.
+- *wrapperClass* and *wrapperStyle* for full vue class and style bindings on the wrapper 
+- *iconClass* and *iconStyle* for the same on the icon itself (does not work with 'complex' type)
 
-This is a flexible component that dynamically displays an icon as described by an Object.
-
-```html
-<icon :icon="{ type: 'mdi', 'mdi': 'star' }"/>
-```
-
-The `type` has possible values 'mdi', 'svg', 'text', and 'img'.
+`<icon>` also accepts an array

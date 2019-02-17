@@ -1,6 +1,6 @@
 {
   "name": "v-omni",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "swiss army knife components",
   "main": "src/index.js",
   "directories": {
